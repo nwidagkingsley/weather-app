@@ -21,7 +21,7 @@ app.post('/weather', async (req, res) => {
       return res.status(400).json({ error: 'City name is required' });
     }
 
-    const apiKey = '7b377d387d84f2ab26a12f63033e4f1b'; // Replace with your OpenWeather API key
+    const apiKey = ''; // Replace with your OpenWeather API key
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
     const response = await axios.get(apiUrl);
