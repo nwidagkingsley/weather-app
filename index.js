@@ -6,13 +6,12 @@ const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public')); // Add a 'public' directory for static files (e.g., weather icons)
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.sendFile(__dirname + '/index.html');
 });
 
 app.post('/weather', async (req, res) => {
