@@ -1,0 +1,29 @@
+<!-- views/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kingsley Weather App</title>
+  <link rel="stylesheet" href="/styles.css"> <!-- Link to a separate CSS file -->
+</head>
+<body>
+  <h1> MIRACLE Weather App</h1>
+  <form id="weatherForm">
+    <label for="cityInput">Enter City:</label>
+    <input type="text" id="cityInput" name="city" required>
+    <button type="submit">Get Weather</button>
+  </form>
+  <div id="weatherResult">
+    <p id="city"></p>
+    <p id="temperature"></p>
+    <p id="description"></p>
+    <p id="humidity"></p>
+    <p id="windSpeed"></p>
+    <img id="weatherIcon" alt="Weather Icon">
+  </div>
+
+  <script src="/scripts.js"></script> <!-- Link to a separate JavaScript file -->
+</body>
+</html>
